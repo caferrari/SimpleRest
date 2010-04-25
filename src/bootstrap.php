@@ -13,5 +13,5 @@ include_once 'SimpleRest/Core.php';
 try{
 	$fw = new \SimpleRest\Core();
 } catch (Exception $e){
-	die ($e);
+	\SimpleRest\Response::error($e->getMessage());
 }
