@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: text/plain; charset=utf-8'); 
 error_reporting(-1);
 ini_set('display_errors', true);
 ini_set('html_errors', true);
@@ -9,4 +10,8 @@ if (!class_exists('\SplClassLoader')) require_once LIB_DIR . '/SplClassLoader.ph
 include_once 'functions.php';
 include_once 'SimpleRest/Core.php';
 
-$fw = new \SimpleRest\Core();
+try{
+	$fw = new \SimpleRest\Core();
+} catch (Exception $e){
+	die ($e);
+}
