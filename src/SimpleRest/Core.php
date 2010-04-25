@@ -19,10 +19,11 @@ class Core
 		$loader->setIncludePath(LIB_DIR);
 		$loader->register();
 
-		//set the error handler
+		// set the error handler
 		set_error_handler('\SimpleRest\Exception::handler');
 
-		Env::$root = str_replace('lib/bootstrap.php', '', $_SERVER['SCRIPT_FILENAME']);
+		// Setup the environment
+		Env::$root = str_replace('src/bootstrap.php', '', $_SERVER['SCRIPT_FILENAME']);
 		Env::$vroot = str_replace($_SERVER['DOCUMENT_ROOT'], '', Env::$root);
 		Env::$uri = $_SERVER['REQUEST_URI'] == Env::$vroot ?
 			'/' :
