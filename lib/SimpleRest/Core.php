@@ -17,11 +17,11 @@ class Core
 	{
 		// start the autoloader
 		$loader = new SplClassLoader();
-        $loader->setIncludePath(LIB_DIR);
-        $loader->register();
+		$loader->setIncludePath(LIB_DIR);
+		$loader->register();
 
-        //set the error handler
-        set_error_handler('\SimpleRest\Exception::handler');
+		//set the error handler
+		set_error_handler('\SimpleRest\Exception::handler');
 	}
 
 }
