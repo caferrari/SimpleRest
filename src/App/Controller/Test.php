@@ -1,8 +1,8 @@
 <?php
 
-namespace App;
+namespace App\Controller;
 
-class Test extends \SimpleRest\Controller implements \SimpleRest\Interfaces\iController
+class Test extends \SimpleRest\Controller
 {
 
 	public function get()

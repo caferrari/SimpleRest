@@ -2,7 +2,7 @@
 
 namespace SimpleRest;
 
-class Controller
+class Controller implements \SimpleRest\Interfaces\iController
 {
 
 }
